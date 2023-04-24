@@ -1,6 +1,6 @@
-import localhost from "../../scripts/31337.json";
-import mumbai from "../../scripts/80001.json";
-import aadhaar_abi from "../../artifacts/contracts/Aadhaar.sol/Aadhaar.json";
+import localhost from "../constants/31337.json";
+import mumbai from "../constants/80001.json";
+import aadhaar_abi from "../constants/Aadhaar.json";
 // dont export from moralis when using react
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import { useEffect, useState } from "react";
