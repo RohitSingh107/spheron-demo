@@ -10,6 +10,7 @@ import { ethers } from "ethers";
 export default function VerifyProof() {
   const { Moralis, isWeb3Enabled, chainId: chainIdHex } = useMoralis();
   const dispatch = useNotification();
+  // @ts-ignore
   const { runContractFunction } = useWeb3Contract();
   const [verificationResult, setVerificationResult] = useState("N/A");
   // These get re-rendered every time due to our connect button!
@@ -50,6 +51,7 @@ export default function VerifyProof() {
     };
 
     const validity = await runContractFunction({
+      // @ts-ignore
       params: options,
       onSuccess: () =>
         console.log("Verification Transaction executed successfully."),

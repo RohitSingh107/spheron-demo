@@ -65,6 +65,7 @@ function convertToLowerCase(str: string): string {
 export default function GenerateProof() {
   const { Moralis, isWeb3Enabled, chainId: chainIdHex } = useMoralis();
   const dispatch = useNotification();
+  // @ts-ignore
   const { runContractFunction } = useWeb3Contract();
   const [userID, setUserID] = useState("Not Found");
   // These get re-rendered every time due to our connect button!
